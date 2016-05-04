@@ -5,6 +5,7 @@ import javax.swing.JPanel;
 
 public class FastBoostraper {
 
+	@SuppressWarnings("unused")
 	private String softwareName;
 	private FastVersion version;
 	private JFrame frame;
@@ -20,8 +21,16 @@ public class FastBoostraper {
 		frame.setMinimumSize(frame.getSize());
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
-		frame.setVisible(true);
+		frame.setVisible(false);
 		
 	}
 	
+	public void setFastPanel(FastPanel fastPanel) {
+		frame.setContentPane(fastPanel);
+		frame.setVisible(true);
+	}
+
+	public FastVersion getFastVersion() {
+		return this.version;
+	}
 }
